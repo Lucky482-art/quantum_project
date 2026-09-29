@@ -29,7 +29,11 @@ def get_live_fuel_price(fuel_type):
     
     # Refresh cache every hour
     if time.time() - _cache_time > 3600 or not _price_cache:
-        api_key = "fa6f258bc09e9f8ad3d0099c913b60176582e969b85ac2a6fb52a69e67a1f868"
+        import os
+        from dotenv import load_dotenv
+        load_dotenv()
+        
+        api_key = os.getenv("OIL_PRICE_API_KEY")
         headers = {"Authorization": f"Token {api_key}"}
         
         try:

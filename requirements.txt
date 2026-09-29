@@ -4,3 +4,9 @@ scikit-learn
 xgboost
 streamlit
 plotly
+streamlit-folium
+folium
+geopy
+searoute
+python-dotenv
+requests
